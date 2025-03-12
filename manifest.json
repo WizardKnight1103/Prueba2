@@ -1,0 +1,39 @@
+{
+"name": "Buscador de images",
+"short_name": "Imagenes",
+"description": "Web con uso de la API de Unsplash",
+"lang": "es-mx",
+"display": "standalone",
+"background_color": "#2E3440",
+"theme_color": "#88C0D0",
+"orientation": "portrait",
+"icons": [
+    {
+        "src": "/img/512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+        "src": "/img/192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }
+],
+"screenshots": [
+    {
+        "src": "/img/lap.png",
+        "sizes": "1366x648",
+        "type": "image/png",
+        "form_factor": "wide"
+    },
+    {
+        "src": "/img/cel.png",
+        "sizes": "477x562",
+        "type": "image/png",
+        "form_factor": "narrow"
+    }
+],
+"id": "/",
+"start_url": "/index.html",
+"scope": "/"
+}

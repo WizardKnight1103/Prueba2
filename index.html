@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Imágenes Unsplash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <button id="dark-mode-toggle">Modo Oscuro</button>
+    <button id="toggle-favorites">Mostrar Favoritos</button>
+    
+    <h1>Buscador de Imágenes Unsplash</h1>
+    
+    <div id="search-container">
+        <input type="text" id="query" placeholder="Escribe tu búsqueda">
+        <button onclick="searchImages()">Buscar</button>
+    </div>
+    
+    <div id="loading" style="display: none;">Cargando...</div>
+    <div id="image-container"></div>
+    
+    <div id="favorites-container" style="display: none;">
+        <h2>Favoritos</h2>
+        <div id="favorites-grid"></div>
+    </div>
+    
+    <div id="feedback" style="display: none;">Resultados cargados exitosamente</div>
+    
+    <footer>
+        <p>&copy; 2025 Buscador de Imágenes Unsplash. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Registrar el Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado con éxito:', registration);
+                    })
+                    .catch(error => {
+                        console.error('Error registrando el Service Worker:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
